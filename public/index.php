@@ -6,6 +6,7 @@ define('PUB', PATH . 'public/');
 
 define('APP', PATH . 'application/');
 define('LIB', APP . 'library/');
+define('CONFIG', LIB . 'config/');
 
 define('VIEWS', APP . 'views/');
 define('CONTROLLERS', APP . 'controllers/');

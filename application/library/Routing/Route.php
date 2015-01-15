@@ -8,13 +8,23 @@ class Route {
 
 	static $routes = Array();
 	static $methods = ['get', 'put', 'post', 'head', 'delete', 'trace', 'options', 'connect', 'patch'];
+	static $currentRoute;
+
+	public static function filterGroup($closure) {
+		call_user_func($closure);
+	}
 
 	public static function add($url, $action, $params = null) {
 		$route = new self;
 		$route->url = $url;
-		$action = explode('->', $action);
-		$route->controller = $action[0];
-		$route->method = $action[1];
+
+		if (is_object($action)) {
+			$route->action = $action;
+		} else {
+			$action = explode('->', $action);
+			$route->controller = $action[0];
+			$route->method = $action[1];
+		}
 		$route->params = $params;
 		$route->regex = $route->generateRegex();
 		if (is_null($params)) {
@@ -25,6 +35,10 @@ class Route {
 		return $route;
 	}
 
+	public static function current() {
+		return static::$currentRoute;
+	}
+
 	public function filters($filters) {
 		if (!is_array($filters)) {
 			throw new Exception("Filters must be defined as an array");
@@ -33,7 +47,7 @@ class Route {
 		return $this;
 	}
 
-	public function method($method) {
+	public function httpMethod($method) {
 		if (in_array($method, static::$methods)) {
 			$this->httpmethod = $method;
 			return $this;

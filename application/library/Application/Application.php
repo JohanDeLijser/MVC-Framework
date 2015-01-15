@@ -10,7 +10,7 @@ use application\library\Routing\Controller as Controller;
 class Application {
 
 	public static function run() {
-		require LIB . 'config/url.php';
+		require CONFIG . 'url.php';
 		require APP . 'routes.php';
 		require APP . 'Filters.php';
 		Controller::init();
