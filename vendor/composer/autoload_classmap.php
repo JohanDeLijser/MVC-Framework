@@ -10,8 +10,10 @@ return array(
     'ClassLoader' => $baseDir . '/application/library/Facade/ClassLoader.php',
     'Route' => $baseDir . '/application/library/Facade/Classes/Route.php',
     'Router' => $baseDir . '/application/library/Facade/Classes/Router.php',
+    'View' => $baseDir . '/application/library/Facade/Classes/View.php',
     'application\\library\\Application\\Application' => $baseDir . '/application/library/Application/Application.php',
     'application\\library\\Routing\\Controller' => $baseDir . '/application/library/Routing/Controller.php',
     'application\\library\\Routing\\Route' => $baseDir . '/application/library/Routing/Route.php',
     'application\\library\\Routing\\Router' => $baseDir . '/application/library/Routing/Router.php',
+    'application\\library\\View\\View' => $baseDir . '/application/library/View/View.php',
 );

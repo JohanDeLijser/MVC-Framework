@@ -5,15 +5,12 @@
  */
 class HomeController {
 	public function index() {
-
+		$name = 'Max Verboom';
+		View::render('index', compact('name'));
 	}
 
 	public function home() {
-
-	}
-
-	public function homer($id, $nee) {
-		echo $id;
-		echo $nee;
+		$name = 'Max';
+		View::render('index', ['name' => $name]);
 	}
 }

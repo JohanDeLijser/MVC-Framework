@@ -26,8 +26,10 @@ class Router {
 				if (!method_exists($route->controller, $route->method)) {
 					throw new Exception("The controller '" . $route->controller . "' does not have a valid method called: '" . $route->method . "'");
 				}
-				foreach ($route->filters as $filter) {
-					Filters::$filter();
+				if (isset($route->filters)) {
+					foreach ($route->filters as $filter) {
+						Filters::$filter();
+					}
 				}
 				if ($route->params != null) {
 					$params = explode('/', trim(str_replace($route->url, '', $urlToMatch), '/'));

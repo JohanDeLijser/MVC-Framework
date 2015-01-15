@@ -1,6 +1,7 @@
 <?php
 
 namespace application\library\Routing;
+
 use Exception;
 
 class Route {
@@ -33,13 +34,7 @@ class Route {
 	}
 
 	public function method($method) {
-		$valid = false;
-		foreach (static::$methods as $httpMethod) {
-			if ($httpMethod == $method) {
-				$valid = true;
-			}
-		}
-		if ($valid == true) {
+		if (in_array($method, static::$methods)) {
 			$this->httpmethod = $method;
 			return $this;
 		}
