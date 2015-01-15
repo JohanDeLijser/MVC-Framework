@@ -13,6 +13,7 @@ $RECYCLE.BIN/
 *.msi
 *.msm
 *.msp
+*-tmp
 
 # Windows shortcuts
 *.lnk
@@ -43,3 +44,4 @@ oracle.sqlite
 Network Trash Folder
 Temporary Items
 .apdisk
+

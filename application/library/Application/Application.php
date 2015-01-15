@@ -10,6 +10,8 @@ use application\library\Routing\Controller as Controller;
 class Application {
 
 	public static function run() {
+		require PATH . 'application/routes.php';
+		require PATH . 'application/Filters.php';
 		Controller::init();
 	}
 

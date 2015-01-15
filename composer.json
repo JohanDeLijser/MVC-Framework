@@ -14,9 +14,6 @@
     "autoload": {
         "classmap": [
             "application/library"
-        ],
-        "file": [
-            "application/routes.php"
         ]
     },
     "support": {
