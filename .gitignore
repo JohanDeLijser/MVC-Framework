@@ -27,6 +27,7 @@ $RECYCLE.BIN/
 .DS_Store
 .AppleDouble
 .LSOverride
+oracle.sqlite
 
 # Thumbnails
 ._*
@@ -37,6 +38,7 @@ $RECYCLE.BIN/
 
 # Directories potentially created on remote AFP share
 .AppleDB
+.phpintel
 .AppleDesktop
 Network Trash Folder
 Temporary Items

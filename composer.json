@@ -1,0 +1,29 @@
+{
+    "name": "FrameworkV1",
+    "type": "project",
+    "description": "A simple PHP MVC Framework",
+    "keywords": ["Framework", "MVC", "PHP", "simple", "application"],
+    "homepage": "https://github.com/panique/mini",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Max Verboom",
+            "role": "Developer"
+        }
+    ],
+    "autoload": {
+        "classmap": [
+            "application/library"
+        ],
+        "file": [
+            "application/routes.php"
+        ]
+    },
+    "support": {
+        "issues": "https://github.com/panique/mini/issues",
+        "source": "https://github.com/panique/mini"
+    },
+    "require": {
+        "php": ">=5.3.0"
+    }
+}
